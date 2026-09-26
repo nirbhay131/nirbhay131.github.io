@@ -1,0 +1,33 @@
+.building-toward-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+}
+
+.building-toward-title {
+  font-size: clamp(48px, 10vw, 128px);
+  background: linear-gradient(180deg, var(--text-0) 0%, var(--text-muted) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.building-toward-concepts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.building-toward-concepts span {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border: 1px solid var(--line);
+  padding: 10px 20px;
+  border-radius: 999px;
+}

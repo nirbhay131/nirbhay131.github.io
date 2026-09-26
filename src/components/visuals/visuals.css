@@ -1,0 +1,439 @@
+.visual {
+  --accent-careersphere: #6a63ff;
+  --accent-croppulse: #5fd0a8;
+  --accent-foodwaste: #e8b25a;
+  --accent-traffic: #5aa9e8;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+  color: var(--text-0);
+}
+
+.visual-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 13px;
+}
+
+.visual-demo-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+}
+
+.visual-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  min-height: 0;
+}
+
+.visual-body--single {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  gap: 16px;
+}
+
+.visual-body--dark {
+  background: #08090c;
+}
+
+.visual-sidebar {
+  border-right: 1px solid var(--line);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.visual-sidebar .active {
+  color: var(--text-0);
+}
+
+.visual-main {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.visual-label {
+  font-family: var(--font-display);
+  font-size: 13px;
+  display: block;
+}
+
+.visual-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-faint);
+  display: block;
+}
+
+/* CareerSphere */
+.visual-readiness {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.visual-readiness-ring {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.visual-readiness-ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.ring-track {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 5;
+}
+
+.ring-fill {
+  fill: none;
+  stroke: var(--accent-careersphere);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.visual-readiness-ring span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.visual-skillbars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.visual-skillbar {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.visual-skillbar .track,
+.density-row .track {
+  height: 4px;
+  background: var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.visual-skillbar .fill {
+  height: 100%;
+  background: var(--accent-careersphere);
+}
+
+.visual-roadmap {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.roadmap-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-faint);
+  flex: 1;
+  text-align: center;
+}
+
+.roadmap-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line-strong);
+}
+
+.roadmap-node.current .roadmap-dot {
+  background: var(--accent-careersphere);
+  box-shadow: 0 0 0 4px var(--accent-dim);
+}
+
+.roadmap-node.current {
+  color: var(--text-0);
+}
+
+/* CropPulse */
+.visual-croprow {
+  display: flex;
+  gap: 16px;
+}
+
+.visual-health {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  min-width: 120px;
+}
+
+.visual-health-value {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--accent-croppulse);
+}
+
+.visual-env-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.visual-env-card {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+
+.visual-env-value {
+  font-family: var(--font-display);
+  font-size: 15px;
+}
+
+.visual-growth {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.growth-chart {
+  width: 100%;
+  height: 60px;
+}
+
+.visual-recommend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.visual-recommend .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-croppulse);
+  flex-shrink: 0;
+}
+
+/* Food waste */
+.visual-fw-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.visual-fw-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  flex: 1;
+}
+
+.visual-fw-card {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.visual-fw-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visual-fw-source {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-faint);
+  text-transform: uppercase;
+}
+
+.visual-fw-status {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  padding: 3px 7px;
+  border-radius: 999px;
+}
+
+.visual-fw-status.avail {
+  background: rgba(95, 208, 168, 0.15);
+  color: var(--accent-croppulse);
+}
+
+.visual-fw-status.claimed {
+  background: rgba(133, 133, 133, 0.15);
+  color: var(--text-muted);
+}
+
+.visual-fw-food {
+  font-family: var(--font-display);
+  font-size: 13px;
+}
+
+.visual-fw-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--accent-foodwaste);
+  text-transform: uppercase;
+}
+
+/* Traffic */
+.visual-intersection {
+  position: relative;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+.intersection-road {
+  position: absolute;
+  background: #16181d;
+}
+
+.intersection-road--h {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 44px;
+  transform: translateY(-50%);
+}
+
+.intersection-road--v {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 44px;
+  transform: translateX(-50%);
+}
+
+.intersection-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+  background: #1c1f26;
+  border: 1px solid var(--line);
+}
+
+.approach {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-faint);
+}
+
+.approach--N { top: 6px; left: 50%; transform: translateX(-50%); }
+.approach--S { bottom: 6px; left: 50%; transform: translateX(-50%); }
+.approach--E { top: 50%; right: 6px; transform: translateY(-50%); }
+.approach--W { top: 50%; left: 6px; transform: translateY(-50%); }
+
+.signal {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.signal--go {
+  background: #5fd0a8;
+  box-shadow: 0 0 8px #5fd0a8;
+}
+
+.signal--stop {
+  background: #e05c5c;
+}
+
+.visual-density {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.density-row {
+  display: grid;
+  grid-template-columns: 16px 1fr 34px;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-faint);
+}
+
+.density-row .fill {
+  height: 100%;
+  background: var(--accent-traffic);
+}
+
+@media (max-width: 700px) {
+  .visual-body {
+    grid-template-columns: 1fr;
+  }
+  .visual-sidebar {
+    display: none;
+  }
+  .visual-croprow,
+  .visual-fw-cards {
+    grid-template-columns: 1fr;
+  }
+}
